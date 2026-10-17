@@ -499,13 +499,14 @@ export const projects: Project[] = [
     images: ["/images/portfolio-tracker.jpg"],
   },
   {
-    title: "Multi-Channel Content Operations Calendar",
+    title: "Multi-Channel Content Operations System",
     description:
-      "Structured content pipeline managing planning, scheduling, and publishing across LinkedIn, Facebook, Instagram, and X — integrated with Buffer.",
+      "Planned and ran three 15-day content series across LinkedIn, X and Facebook, tracked from draft to publish in one calendar.",
+    tools: "Buffer · LinkedIn scheduling · Google Sheets · Canva",
     outcomes: [
-      "Prevented missed publishing deadlines",
-      "Created full content lifecycle visibility",
-      "Maintained cross-platform execution consistency",
+      "45 posts planned: 27 published and 8 scheduled through Buffer and native LinkedIn scheduling, with the rest queued for the next batch",
+      "Every post checked for asset readiness, accessibility and alt text before it was scheduled",
+      "My LinkedIn content has reached 12,000+ impressions on a single post",
     ],
     link: {
       href: "https://docs.google.com/spreadsheets/d/1n9bi9pJedqHuHevkvG0gqprObeI_Qt_-OHrjWTBS71E/view?usp=sharing",

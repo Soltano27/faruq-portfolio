@@ -19,7 +19,7 @@ export const site = {
   metaDescription:
     "Faruq Sosanya, operations and programme coordinator in Nigeria. Founder support and digital operations for health NGOs. Open to remote and hybrid roles.",
   description:
-    "Faruq Olawale Sosanya is an operations and programme coordinator in Abeokuta, Nigeria. He supports founders and runs digital operations for health NGOs: trackers, stakeholder databases, newsletter systems, websites and meeting documentation. Open to remote and hybrid roles in operations, programme coordination, executive and founder support, and digital operations.",
+    "Faruq Olawale Sosanya is an operations and programme coordinator in Abeokuta, Nigeria. He supports founders and runs digital operations for health NGOs: trackers, stakeholder databases, newsletter systems, websites, content scheduling and meeting documentation. Open to remote and hybrid roles in operations, programme coordination, executive and founder support, and digital operations.",
   knowsAbout: [
     "Operations coordination",
     "Programme coordination",
@@ -32,6 +32,7 @@ export const site = {
     "Google Workspace",
     "Meeting documentation and reporting",
     "Funding pipeline management",
+    "Social media scheduling",
     "Global health",
     "Claude AI",
     "Next.js",
@@ -247,9 +248,9 @@ export const liveSites: { group: string; sites: LiveSite[] }[] = [
       {
         name: "Neuro Champions Fellowship LMS",
         url: "https://ncf-lms.vercel.app",
-        description:
-          "Learning platform for a youth brain-health fellowship: Next.js, Supabase, and Google sign-in, with admin and fellow dashboards, attendance, and submissions. Login required beyond the landing page.",
         image: "/images/site-ncf-lms-admin.jpg",
+        description:
+          "Learning platform for a youth brain-health fellowship: Next.js, Supabase and Google sign-in, with admin and fellow dashboards, attendance and submissions. Login required beyond the landing page.",
       },
     ],
   },
@@ -309,6 +310,7 @@ export type Role = {
   caption?: string;
 };
 
+/** Current roles first, then past roles, most recent first. */
 export const experience: Role[] = [
   {
     org: "The EOS Foundation",
@@ -320,6 +322,7 @@ export const experience: Role[] = [
       "Work directly with the founder on operations, administration and programme delivery: correspondence in her voice, scheduling with invites and reminders, grant materials and weekly follow-through.",
       "Rebuilt the foundation's operating systems for its relaunch within 48 hours of joining: Drive architecture, task tracker and funding pipeline.",
       "Built and maintain a funding pipeline of 35+ opportunities with automated alerts for deadlines within 7 days.",
+      "Set a rule keeping names and health information out of free AI tools, and turned on two-factor authentication across the foundation's accounts.",
       "Built the foundation's website and the Neuro Champions Fellowship learning platform from scratch, using Claude as coding partner.",
       "Reviewed two major funding applications before submission, flagging contradictory figures, an unverifiable statistic and a misaligned funding category.",
     ],
@@ -349,6 +352,25 @@ export const experience: Role[] = [
     points: [
       "Secretariat support for the inaugural two-day meeting with WHO, Federal and State Ministries of Health, academic institutions and professional bodies: attendance, logistics, transcription, minutes, resolutions and action points.",
       "Rapporteur for the Q3 2026 quarterly meeting: drafted the Day 2 report, compiled the merged report, photographed the sessions and prepared the Q3 presentation.",
+    ],
+  },
+  {
+    org: "Faruq Digital Solutions",
+    title: "Founder, Digital Operations",
+    date: "June 2023 to Present",
+    points: [
+      "Websites, CMS management and documentation support for small businesses in Ogun State, including client furniture and gadget stores.",
+      "Plan and schedule content across LinkedIn, X and Facebook with Buffer, with accessibility checks and alt text on every post.",
+    ],
+  },
+  {
+    org: "Maison AMEEABLE LTD",
+    title: "Strategy & Market Research Associate (project-based)",
+    date: "January 2026 to April 2026",
+    logo: "/images/logo-maison-ameeable.png",
+    points: [
+      "Ran buyer research and competitor analysis for an artisan-led B2B brand's positioning.",
+      "Co-authored Strategic Buyer Insights for Artisan-Led B2B Brands (2026) with Promise Amiolemen.",
     ],
   },
   {
@@ -385,24 +407,6 @@ export const experience: Role[] = [
       "Mediated executive disputes and coordinated community programmes statewide.",
     ],
   },
-  {
-    org: "Faruq Digital Solutions",
-    title: "Founder, Digital Operations",
-    date: "June 2023 to Present",
-    points: [
-      "Websites, CMS management and documentation support for small businesses in Ogun State, including client furniture and gadget stores.",
-    ],
-  },
-  {
-    org: "Maison AMEEABLE LTD",
-    title: "Strategy & Market Research Associate (project-based)",
-    date: "January 2026 to April 2026",
-    logo: "/images/logo-maison-ameeable.png",
-    points: [
-      "Ran buyer research and competitor analysis for an artisan-led B2B brand's positioning.",
-      "Co-authored Strategic Buyer Insights for Artisan-Led B2B Brands (2026) with Promise Amiolemen.",
-    ],
-  },
 ];
 
 export type Project = {
@@ -421,12 +425,12 @@ export const projects: Project[] = [
   {
     title: "Recruitment Automation Repair: Infectious Disease Alliance",
     description:
-      "The Wix → Google Sheets recruitment automation had been broken for 4+ months, leaving HR unsure which applications had arrived. I traced the root cause to unsaved manual edits breaking column-header matching, then fixed the system rather than the symptom.",
+      "The Wix to Google Sheets recruitment automation had been broken for 4+ months, leaving HR unsure which applications had arrived. I traced the cause to unsaved manual edits breaking column-header matching, then fixed the system rather than the symptom.",
     tools: "Wix Automations · Google Sheets · Loom",
     outcomes: [
       "Remapped the automation, corrected timestamp columns, and built a filtered applicants tab HR could act on immediately",
       "Added cell-level formula protections and a source/working-tab split so the break could not recur",
-      "Recorded a Loom walkthrough so HR could self-serve",
+      "Recorded a Loom walkthrough so HR could run it themselves",
     ],
   },
   {
@@ -436,7 +440,7 @@ export const projects: Project[] = [
     tools: "Brevo · Wix Velo · Google Sheets · Webhooks",
     outcomes: [
       "Deduplicated 5,100+ contacts across Wix and Brevo into one master list",
-      "Built real-time subscribe automation plus an unsubscribe webhook syncing Brevo → Google Sheets → Wix",
+      "Built real-time subscribe automation plus an unsubscribe webhook syncing Brevo, Google Sheets and Wix",
       "20.4% open rate on the first send to 5,000+ stakeholders; about 50% opens and 20% clicks on the monthly digest by mid-2026",
     ],
   },
@@ -447,9 +451,9 @@ export const projects: Project[] = [
     tools: "Google Drive · Google Sheets · Calendar automation",
     images: ["/images/portfolio-eos-drive.jpg", "/images/site-eos.jpg"],
     outcomes: [
-      "Within 48 hours: a 5-area Drive architecture with a naming convention, task tracker, meeting notes, and funding tracker",
-      "A funding pipeline of 35+ opportunities with automated flags for deadlines within 7 days, tagging internal vs third-party applications",
-      "Draft correspondence, calendar invites, and reminders handled for the founder",
+      "Within 48 hours: a 5-area Drive architecture with a naming convention, task tracker, meeting notes and funding tracker, with older material moved to an archive",
+      "A funding pipeline of 35+ opportunities with automated flags for deadlines within 7 days, tagging internal and third-party applications",
+      "Draft correspondence, calendar invites and reminders handled for the founder",
     ],
   },
   {
@@ -469,36 +473,6 @@ export const projects: Project[] = [
     link: { href: "https://ncf-lms.vercel.app", label: "Visit Platform" },
   },
   {
-    title: "Workflow & Operations Dashboard Stack",
-    description:
-      "Built a complete operations system using Google Workspace to track initiatives, manage execution, and maintain visibility across ongoing work.",
-    outcomes: [
-      "Reduced task ambiguity through structured intake and priority tagging",
-      "Created end-to-end workflow from capture to execution",
-      "Built to be copied by other remote teams",
-    ],
-    link: {
-      href: "https://docs.google.com/spreadsheets/d/1uo4gULl9PfYrXoQ05gxA6MkFSBFH0cVRgBO7O7ALyyA/view?usp=sharing",
-      label: "View Work",
-    },
-    images: ["/images/portfolio-dashboard.jpg"],
-  },
-  {
-    title: "Operations Task Intake & Execution Tracker",
-    description:
-      "Daily task log for capturing incoming work, assigning ownership, and ensuring follow-through with priority tagging and escalation notes.",
-    outcomes: [
-      "Prevented missed deadlines through structured tracking",
-      "Introduced blocker visibility across active work",
-      "Maintained audit trail of all task movements",
-    ],
-    link: {
-      href: "https://docs.google.com/spreadsheets/d/1jfx-_b2m8uExFXdrl6vSsZVOOEg2gQOS-3LrAztKvzA/preview",
-      label: "View Work",
-    },
-    images: ["/images/portfolio-tracker.jpg"],
-  },
-  {
     title: "Multi-Channel Content Operations System",
     description:
       "Planned and ran three 15-day content series across LinkedIn, X and Facebook, tracked from draft to publish in one calendar.",
@@ -509,19 +483,65 @@ export const projects: Project[] = [
       "My LinkedIn content has reached 12,000+ impressions on a single post",
     ],
     link: {
-      href: "https://docs.google.com/spreadsheets/d/1n9bi9pJedqHuHevkvG0gqprObeI_Qt_-OHrjWTBS71E/view?usp=sharing",
+      href: "https://docs.google.com/spreadsheets/d/1n9bi9pJedqHuHevkvG0gqprObeI_Qt_-OHrjWTBS71E/view",
       label: "View Work",
     },
     images: ["/images/portfolio-calendar.jpg"],
   },
   {
+    title: "Content Systems Library",
+    description:
+      "The Google Drive library behind the content calendar: one folder per channel, each holding the series copy document and its images, so every post can be traced from draft to published asset.",
+    tools: "Google Drive · Google Docs · Canva",
+    outcomes: [
+      "One folder per channel (LinkedIn, X, Facebook and Instagram) with a consistent structure",
+      "Copy documents and image folders kept together for each series",
+      "Linked to the content calendar so assets and posts stay in step",
+    ],
+    link: {
+      href: "https://drive.google.com/drive/folders/1KnNjxNtiYTRbaiArJb8CSLDiJO6lUAWu?usp=drive_link",
+      label: "View Work",
+    },
+    images: ["/images/portfolio-library.jpg"],
+  },
+  {
+    title: "Workflow & Operations Dashboard Stack",
+    description:
+      "A Google Workspace operations dashboard for tracking initiatives, owners, weekly focus and blockers in one view.",
+    outcomes: [
+      "Structured intake with priority tags and clear ownership",
+      "Status tracking from capture to completion",
+      "A template structure other remote teams can copy",
+    ],
+    link: {
+      href: "https://docs.google.com/spreadsheets/d/1uo4gULl9PfYrXoQ05gxA6MkFSBFH0cVRgBO7O7ALyyA/view?usp=sharing",
+      label: "View Work",
+    },
+    images: ["/images/portfolio-dashboard.jpg"],
+  },
+  {
+    title: "Operations Task Intake & Execution Tracker",
+    description:
+      "A daily task log for capturing incoming work, assigning ownership and following through, with priority tags and escalation notes.",
+    outcomes: [
+      "Deadlines and owners visible for every task",
+      "A blocker column so stuck work is flagged early",
+      "A full record of how each task moved",
+    ],
+    link: {
+      href: "https://docs.google.com/spreadsheets/d/1jfx-_b2m8uExFXdrl6vSsZVOOEg2gQOS-3LrAztKvzA/preview",
+      label: "View Work",
+    },
+    images: ["/images/portfolio-tracker.jpg"],
+  },
+  {
     title: "Medical Outreach Operations: IMAN Ogun State",
     description:
-      "Supported large-scale community health screening operations at OGMA 2026 in collaboration with the Islamic Medical Association of Nigeria (IMAN), Ogun State.",
+      "Supported large-scale community health screening at OGMA 2026 with the Islamic Medical Association of Nigeria (IMAN), Ogun State.",
     outcomes: [
       "Coordinated participant registration and patient flow for 100+ screenings per session",
       "Supported urinalysis and blood glucose screening and recorded results accurately",
-      "Maintained documentation integrity across full screening workflow from intake to consultation",
+      "Kept documentation accurate across the screening workflow, from intake to consultation",
     ],
     images: ["/images/portfolio-iman.jpg"],
     narrow: true,
@@ -544,11 +564,11 @@ export const projects: Project[] = [
   {
     title: "Lead Sourcing & Data Research System",
     description:
-      "Built a repeatable workflow to identify, verify, and organize publicly available professional contact data using advanced search operators — mirroring real recruiting and partnerships operations.",
+      "A repeatable workflow to find, verify and organise publicly available professional contact data using advanced search operators.",
     outcomes: [
-      "Turned ad-hoc research into a documented, repeatable workflow",
-      "Maintained ethical sourcing with full data traceability",
-      "Produced a structured tracker ready for outreach teams",
+      "A documented, repeatable research method in place of ad-hoc searching",
+      "A source recorded for every contact, using public information only",
+      "A structured tracker ready for outreach teams",
     ],
     link: {
       href: "https://docs.google.com/spreadsheets/d/1RB70al18W7HCaiEl-IWvUjVYPa-HvZ-Vx-vmpqwvxPE/edit?usp=sharing",
@@ -557,30 +577,15 @@ export const projects: Project[] = [
     images: ["/images/portfolio-leads.jpg"],
   },
   {
-    title: "Content Systems Library",
-    description:
-      "Organized Google Drive workspace housing all content assets — graphics, caption drafts, approved copy, and working files — structured to support a full idea-to-publishing workflow.",
-    outcomes: [
-      "Demonstrated complete end-to-end content operations",
-      "Enabled version control and cross-platform asset management",
-      "Integrated with content calendar and Buffer scheduling",
-    ],
-    link: {
-      href: "https://drive.google.com/drive/folders/1KnNjxNtiYTRbaiArJb8CSLDiJO6lUAWu?usp=drive_link",
-      label: "View Work",
-    },
-    images: ["/images/portfolio-library.jpg"],
-  },
-  {
     title: "IDA Newsletter Vol. 1 No. 1: “News from IDA”",
     description:
-      "Designed and built the Infectious Disease Alliance's inaugural newsletter from scratch using Wix Email Marketing, resolving mobile rendering issues by engineering a custom pure inline HTML/table layout after discovering Wix strips all CSS style tags entirely.",
+      "Designed and built the first issue of the Infectious Disease Alliance's new newsletter series in Wix Email Marketing. When Wix stripped all CSS style tags, I rebuilt the layout in pure inline HTML and tables so it displayed correctly on mobile.",
     tools:
-      "Wix Email Marketing · Inline HTML · CSS · Email rendering troubleshooting",
+      "Wix Email Marketing · Inline HTML · Email rendering troubleshooting",
     outcomes: [
-      "Built IDA's first ever newsletter end-to-end — content architecture, layout, and technical execution",
-      "Independently diagnosed and solved cross-platform rendering failure that would have broken mobile display",
-      "Delivered a production-ready email adopted into IDA's official communications strategy",
+      "Built the first issue end to end: content structure, layout and technical execution",
+      "Diagnosed and fixed a rendering failure that would have broken the mobile display",
+      "Became the template for later issues of IDA's newsletter",
     ],
     images: ["/images/portfolio-newsletter.jpg"],
     narrow: true,
@@ -599,13 +604,12 @@ export const projects: Project[] = [
   {
     title: "Community Infrastructure Financial Reconciliation",
     description:
-      "Converted fragmented handwritten committee worksheets into a structured, audit-ready financial record reconciling ₦18.7M in shared costs across a community electricity project using a 60/40 cost-sharing model.",
-    tools:
-      "Microsoft Excel · Data structuring · Financial documentation · Reporting workflows",
+      "Turned handwritten committee worksheets into a structured, audit-ready record reconciling ₦18.7M in shared costs for a community electricity project, using a 60/40 cost-sharing model.",
+    tools: "Microsoft Excel · Data structuring · Financial documentation",
     outcomes: [
       "Reconciled ₦18.7M total project cost across 16 expense categories and multiple estimates",
-      "Designed and applied a 60/40 cost-sharing allocation framework between two communities",
-      "Delivered committee-ready financial documentation from fragmented handwritten records",
+      "Applied a 60/40 cost-sharing split between two communities",
+      "Delivered committee-ready financial documentation from handwritten records",
     ],
     images: ["/images/portfolio-reconciliation.jpg"],
     narrow: true,
@@ -625,7 +629,7 @@ export const projects: Project[] = [
   {
     title: "Field Operations & Documentation: INEC",
     description:
-      "Managed high-compliance electoral operations across three INEC deployments (Continuous Voter Registration, a senatorial election and a gubernatorial election), covering biometric data capture, result documentation, and BVAS system troubleshooting.",
+      "Electoral operations across three INEC deployments (Continuous Voter Registration, a senatorial election and a gubernatorial election), covering biometric data capture, result documentation and BVAS troubleshooting.",
     outcomes: [
       "Registered and verified 1,200+ voters with zero data errors",
       "Ran polling units of up to 206 voters with zero spoilt ballots",
@@ -640,10 +644,10 @@ export const projects: Project[] = [
   {
     title: "Land The Role: The Complete AI-Powered Job Search System",
     description:
-      "A self-authored, 15-chapter job search system for African professionals, NYSC completers, and career switchers, written after my own post-NYSC applications met silence. Each chapter is a system with defined inputs, decision rules, and outputs, tested in Nigerian and African job markets.",
+      "A 15-chapter job search system I wrote for African professionals, NYSC completers and career switchers, after my own post-NYSC applications met silence. Each chapter is a system with defined inputs, decision rules and outputs, tested in Nigerian and African job markets.",
     tools: "Book · April 2026 · 2026 Edition",
     outcomes: [
-      "One positioning formula reused across the LinkedIn headline, CV summary, cover letter, and interview introduction",
+      "One positioning formula reused across the LinkedIn headline, CV summary, cover letter and interview introduction",
       "A 5-filter role assessment with a fixed verdict rule, plus ATS-safe CV and five-part cover letter systems",
       "A follow-up timeline, interview frameworks, and an AI pipeline that gives each tool a defined role",
     ],
@@ -657,11 +661,11 @@ export const projects: Project[] = [
   {
     title: "CV AI Operation Guide: Model-Agnostic System Prompt",
     description:
-      "A reusable operating guide that turns any large language model (Claude, ChatGPT, Gemini, Perplexity, or Manus) into a consistent job-application assistant working from the same data, rules, and quality checks.",
+      "A reusable operating guide that turns any large language model (Claude, ChatGPT, Gemini, Perplexity or Manus) into a consistent job-application assistant working from the same data, rules and quality checks.",
     tools: "System prompt · v1 March 2026 · v3 September 2026",
     outcomes: [
-      "Ten-section architecture: verified source data, a 5-filter decision layer, production rules, and a live application tracker",
-      "Guardrails designed in: no fabrication, flag conflicts before proceeding, and the human makes the final call",
+      "Ten-section structure: verified source data, a 5-filter decision layer, production rules and a live application tracker",
+      "Guardrails built in: no fabrication, flag conflicts before proceeding, and the human makes the final call",
       "Later versions embed the full verified work history and writing rules, so outputs stopped varying between tools",
     ],
     link: {
@@ -674,11 +678,11 @@ export const projects: Project[] = [
   {
     title: "Formal Commendations: NYSC & Public Sector",
     description:
-      "Three independent formal commendation letters issued by three separate institutional authorities during the same service year — the NYSC Anambra State Coordinator, the Acting Registrar of ANSPOLY, and the Acting Rector of ANSPOLY — recognising operational excellence, records management, and institutional initiative.",
+      "Three formal commendation letters from three separate authorities in the same service year: the NYSC Anambra State Coordinator, the Acting Registrar of ANSPOLY and the Acting Rector of ANSPOLY.",
     outcomes: [
-      "Commended by NYSC State Coordinator (Mrs. Pauline Ojisua) for discipline, dedication, and commitment",
+      "Commended by the NYSC State Coordinator (Mrs. Pauline Ojisua) for discipline, dedication and commitment",
       "Commended by Acting Registrar Dr. Edith Nkechi Udalla for diligence and contribution to academic record management in the Library Unit",
-      "Commended by Acting Rector Dr. Njideka Rita Chiekezie for exemplary service, initiative, and outstanding contributions including 3D directional signage installation and cross-departmental support",
+      "Commended by Acting Rector Dr. Njideka Rita Chiekezie for exemplary service and initiative, including the 3D directional signage installation and cross-departmental support",
     ],
     link: {
       href: "https://drive.google.com/file/d/1rOZldmvESJUpGywMR3iG3LzaSgPQdsdE/view?usp=sharing",

@@ -12,8 +12,8 @@ export default function Home() {
     <>
       <section className="hero">
         <div className="hero-bg" aria-hidden="true">
-          <div className="figure">
-            <Photo src="/images/hero.jpg" alt="" />
+          <div className="figure hero-portrait">
+            <Photo src="/images/about.jpg" alt="" />
           </div>
         </div>
         <div className="wrap">

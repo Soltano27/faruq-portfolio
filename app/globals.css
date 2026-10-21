@@ -1359,7 +1359,7 @@ p {
 }
 .hero-bg .hero-portrait img {
   object-position: center 28%;
-  filter: grayscale(1) brightness(0.62) contrast(1.1);
+  filter: brightness(0.7) contrast(1.05);
 }
 .hero-bg .hero-portrait::after {
   content: "";

@@ -1361,11 +1361,21 @@ p {
   object-position: center 28%;
   filter: brightness(0.7) contrast(1.05);
 }
-.hero-bg .hero-portrait::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #050505 0%, rgba(5, 5, 5, 0) 45%);
+.hero-bg .hero-portrait img {
+  object-position: center 28%;
+  filter: grayscale(1) brightness(0.62) contrast(1.1);
+  animation: hero-colour 2.5s ease 1.5s forwards;
+}
+@keyframes hero-colour {
+  to {
+    filter: grayscale(0) brightness(0.7) contrast(1.05);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg .hero-portrait img {
+    animation: none;
+    filter: brightness(0.7) contrast(1.05);
+  }
 }
 @media (max-width: 900px) {
   .hero-bg .hero-portrait {

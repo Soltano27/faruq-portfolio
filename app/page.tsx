@@ -12,7 +12,9 @@ export default function Home() {
     <>
       <section className="hero">
         <div className="hero-bg" aria-hidden="true">
-          <div className="figure"><Photo src="/images/hero.jpg" alt="" /></div>
+          <div className="figure">
+            <Photo src="/images/hero.jpg" alt="" />
+          </div>
         </div>
         <div className="wrap">
           <p className="status">Available for Opportunities</p>
@@ -22,21 +24,39 @@ export default function Home() {
             <span className="yellow">running.</span>
           </h1>
           <p className="lede">
-            Operations and programme coordinator for health NGOs and growing organisations. I support founders,
-            run digital operations and build trackers, databases and websites that keep working after I hand them over.
-            Based in Abeokuta, Nigeria. Open to remote and hybrid roles.
+            Operations and programme coordinator for health NGOs and growing
+            organisations. I support founders, run digital operations and build
+            trackers, databases and websites that keep working after I hand them
+            over. Based in Abeokuta, Nigeria. Open to remote and hybrid roles.
           </p>
           <div className="actions">
-            <Link href="/portfolio" className="btn btn-primary">See My Work <ArrowRight /></Link>
-            <Link href="/contact" className="btn btn-ghost">Let&apos;s Work Together</Link>
+            <Link href="/portfolio" className="btn btn-primary">
+              See My Work <ArrowRight />
+            </Link>
+            <Link href="/contact" className="btn btn-ghost">
+              Let&apos;s Work Together
+            </Link>
+            <a
+              href="/cv/Faruq-Sosanya-CV.pdf"
+              className="btn btn-ghost"
+              download
+            >
+              Download CV
+            </a>
           </div>
         </div>
       </section>
 
       <section className="milestones" aria-labelledby="milestones-title">
         <div className="wrap">
-          <h2 id="milestones-title" className="eyebrow">Where I have worked</h2>
-          <ul>{milestones.map((m) => <li key={m}>{m}</li>)}</ul>
+          <h2 id="milestones-title" className="eyebrow">
+            Where I have worked
+          </h2>
+          <ul>
+            {milestones.map((m) => (
+              <li key={m}>{m}</li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -67,9 +87,15 @@ export default function Home() {
         <div className="wrap">
           <div className="row-head">
             <h2 className="section-title">Featured writing</h2>
-            <Link href="/blog" className="text-link">View all <ArrowRight /></Link>
+            <Link href="/blog" className="text-link">
+              View all <ArrowRight />
+            </Link>
           </div>
-          <div className="posts">{featuredPosts.map((p) => <PostCard key={p.slug} post={p} />)}</div>
+          <div className="posts">
+            {featuredPosts.map((p) => (
+              <PostCard key={p.slug} post={p} />
+            ))}
+          </div>
         </div>
       </section>
     </>

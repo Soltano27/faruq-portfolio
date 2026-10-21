@@ -4,7 +4,8 @@ import { experience } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Experience",
-  description: "Work history of Faruq Sosanya: The EOS Foundation, Infectious Disease Alliance, Ogun State Laboratory Technical Working Group, INEC and Anambra State Polytechnic.",
+  description:
+    "Work history of Faruq Sosanya: The EOS Foundation, Infectious Disease Alliance, Ogun State Laboratory Technical Working Group, INEC and Anambra State Polytechnic.",
   alternates: { canonical: "/experience" },
 };
 
@@ -14,7 +15,18 @@ export default function ExperiencePage() {
       <header className="page-head exp-head">
         <div className="wrap exp-wrap">
           <h1>Experience</h1>
-          <p>Founder support, digital operations, government health secretariat work and electoral field operations, most recent first.</p>
+          <p>
+            Founder support, digital operations, government health secretariat
+            work and electoral field operations, most recent first.
+          </p>
+          <a
+            href="/cv/Faruq-Sosanya-CV.pdf"
+            className="btn btn-primary"
+            download
+            style={{ marginTop: "1.5rem" }}
+          >
+            Download CV
+          </a>
         </div>
       </header>
       <section className="exp-section">
@@ -35,11 +47,15 @@ export default function ExperiencePage() {
                 </div>
                 <div className="exp-body">
                   <ul className="exp-points">
-                    {r.points.map((p) => <li key={p}>{p}</li>)}
+                    {r.points.map((p) => (
+                      <li key={p}>{p}</li>
+                    ))}
                   </ul>
                   {r.photo && (
                     <figure className="exp-photo">
-                      <div className="exp-photo-img"><Photo src={r.photo} alt={r.caption ?? r.org} /></div>
+                      <div className="exp-photo-img">
+                        <Photo src={r.photo} alt={r.caption ?? r.org} />
+                      </div>
                       {r.caption && <figcaption>{r.caption}</figcaption>}
                     </figure>
                   )}

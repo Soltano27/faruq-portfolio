@@ -29,6 +29,24 @@ export default function Home() {
             trackers, databases and websites that keep working after I hand them
             over. Based in Abeokuta, Nigeria. Open to remote and hybrid roles.
           </p>
+          <dl className="hero-stats">
+            <div>
+              <dt>2,800+</dt>
+              <dd>stakeholder records</dd>
+            </div>
+            <div>
+              <dt>4,500+</dt>
+              <dd>newsletter recipients, ~50% opens</dd>
+            </div>
+            <div>
+              <dt>1,200+</dt>
+              <dd>voter registrations, 0 errors</dd>
+            </div>
+            <div>
+              <dt>1,600+</dt>
+              <dd>library records digitised</dd>
+            </div>
+          </dl>
           <div className="actions">
             <Link href="/portfolio" className="btn btn-primary">
               See My Work <ArrowRight />

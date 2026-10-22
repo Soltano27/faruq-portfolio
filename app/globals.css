@@ -1430,3 +1430,38 @@ p {
 html.has-scrolled .about-photo img {
   filter: grayscale(1);
 }
+
+/* Home hero: big numbers */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: start;
+  gap: 0 2.2rem;
+  margin: 1.8rem 0 2rem;
+  padding: 1.2rem 0 0;
+  border-top: 1px solid var(--line);
+  max-width: 640px;
+}
+.hero-stats dt {
+  font-family: var(--font-display, inherit);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--yellow);
+  line-height: 1.1;
+}
+.hero-stats dd {
+  margin: 0.3rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: #a3a3a3;
+  max-width: 13ch;
+}
+@media (max-width: 640px) {
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem 1.5rem;
+  }
+  .hero-stats dd {
+    max-width: none;
+  }
+}

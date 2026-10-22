@@ -134,9 +134,8 @@ p {
 .nav-desktop a.nav-cta {
   background: var(--yellow);
   color: #0a0a0a;
-  max-width: 6.2rem;
-  text-align: center;
-  padding: 0.55rem 1.4rem;
+  white-space: nowrap;
+  padding: 0.6rem 1.4rem;
 }
 .nav-desktop a.nav-cta:hover {
   background: var(--yellow-hover);

@@ -29,6 +29,22 @@ export default function Home() {
             trackers, databases and websites that keep working after I hand them
             over. Based in Abeokuta, Nigeria. Open to remote and hybrid roles.
           </p>
+
+          <div className="actions">
+            <Link href="/portfolio" className="btn btn-primary">
+              See My Work <ArrowRight />
+            </Link>
+            <Link href="/contact" className="btn btn-ghost">
+              Let&apos;s Work Together
+            </Link>
+            <a
+              href="/cv/Faruq-Sosanya-CV.pdf"
+              className="btn btn-ghost"
+              download
+            >
+              Download CV
+            </a>
+          </div>
           <dl className="hero-stats">
             <div>
               <dt>2,800+</dt>
@@ -47,21 +63,6 @@ export default function Home() {
               <dd>library records digitised</dd>
             </div>
           </dl>
-          <div className="actions">
-            <Link href="/portfolio" className="btn btn-primary">
-              See My Work <ArrowRight />
-            </Link>
-            <Link href="/contact" className="btn btn-ghost">
-              Let&apos;s Work Together
-            </Link>
-            <a
-              href="/cv/Faruq-Sosanya-CV.pdf"
-              className="btn btn-ghost"
-              download
-            >
-              Download CV
-            </a>
-          </div>
         </div>
       </section>
 

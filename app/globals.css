@@ -1465,3 +1465,26 @@ html.has-scrolled .about-photo img {
     max-width: none;
   }
 }
+/* Home hero: tighter spacing so buttons fit on laptop screens */
+.hero {
+  padding: 2.5rem 0;
+}
+.hero .status {
+  margin-bottom: 1.4rem;
+}
+.hero .lede {
+  margin-top: 1.3rem;
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  max-width: 60ch;
+}
+.hero .actions {
+  margin-top: 1.6rem;
+}
+.hero-stats {
+  margin: 1.8rem 0 0;
+}
+@media (min-width: 901px) and (max-height: 760px) {
+  .hero h1 {
+    font-size: clamp(2.2rem, 3.9vw, 3.2rem);
+  }
+}

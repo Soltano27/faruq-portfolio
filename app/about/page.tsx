@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Photo from "@/components/Photo";
+import ScrollGrayscale from "@/components/ScrollGrayscale";
 import { External, QuoteMark } from "@/components/Icons";
 import { site, testimonials } from "@/lib/content";
 
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <section className="about-page">
+      <ScrollGrayscale />
       <div className="wrap about-grid">
         <div className="about-photo-frame">
           <div className="about-photo">

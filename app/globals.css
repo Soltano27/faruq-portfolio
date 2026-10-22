@@ -1420,3 +1420,11 @@ p {
     grid-template-columns: 1fr;
   }
 }
+/* About photo: colour at the top, grayscale once the visitor scrolls */
+.about-photo img {
+  filter: none;
+  transition: filter 0.9s ease;
+}
+html.has-scrolled .about-photo img {
+  filter: grayscale(1);
+}

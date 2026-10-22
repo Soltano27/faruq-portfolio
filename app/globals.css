@@ -1357,10 +1357,7 @@ p {
 .hero h1 {
   font-size: clamp(2.4rem, 4.4vw, 3.7rem);
 }
-.hero-bg .hero-portrait img {
-  object-position: center 28%;
-  filter: brightness(0.7) contrast(1.05);
-}
+
 .hero-bg .hero-portrait img {
   object-position: center 28%;
   filter: grayscale(1) brightness(0.62) contrast(1.1);
@@ -1377,14 +1374,43 @@ p {
     filter: brightness(0.7) contrast(1.05);
   }
 }
+.hero-bg .hero-portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #050505 0%, rgba(5, 5, 5, 0) 45%);
+}
 @media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 0;
+  }
+  .hero-bg {
+    position: relative;
+    inset: auto;
+    height: min(62vw, 440px);
+    margin-bottom: -2.5rem;
+  }
+  .hero-bg::after {
+    background: linear-gradient(0deg, #050505 0%, rgba(5, 5, 5, 0) 45%);
+  }
   .hero-bg .hero-portrait {
     width: 100%;
   }
+  .hero-bg .hero-portrait::after {
+    background: none;
+  }
   .hero-bg .hero-portrait img {
-    opacity: 0.35;
+    object-position: center 38%;
   }
 }
+@media (max-width: 600px) {
+  .hero-bg {
+    height: 105vw;
+  }
+}
+
 /* About: two recommendation cards per row */
 .testimonials {
   grid-template-columns: repeat(2, minmax(0, 1fr));

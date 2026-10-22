@@ -1403,6 +1403,8 @@ p {
   }
   .hero-bg .hero-portrait img {
     object-position: center 38%;
+    animation: none;
+    filter: none;
   }
 }
 @media (max-width: 600px) {

@@ -11,6 +11,36 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
+const commendationsLink =
+  "https://drive.google.com/file/d/1rOZldmvESJUpGywMR3iG3LzaSgPQdsdE/view?usp=sharing";
+
+const commendations = [
+  {
+    from: "Anambra State Polytechnic",
+    office: "Office of the Rector",
+    reason:
+      "Exemplary service, initiative and outstanding contributions, including systems improvement and campus support projects.",
+    signed: "Dr. Njideka Rita Chiekezie, Ag. Rector",
+    date: "13 November 2025",
+  },
+  {
+    from: "Anambra State Polytechnic",
+    office: "Office of the Registrar",
+    reason:
+      "Diligence, reliability and contribution to academic record management in the Library Unit.",
+    signed: "Dr. Edith Nkechi Udalla, Ag. Registrar",
+    date: "24 December 2025",
+  },
+  {
+    from: "NYSC Anambra State Secretariat",
+    office: "Office of the State Coordinator",
+    reason:
+      "Discipline, diligence and commitment during the 2024 Batch C service year.",
+    signed: "Mrs. Pauline Ojisua, State Coordinator",
+    date: "12 December 2025",
+  },
+];
+
 export default function AboutPage() {
   return (
     <section className="about-page">
@@ -65,6 +95,35 @@ export default function AboutPage() {
           >
             Download CV
           </a>
+
+          <div className="commendations">
+            <div className="colleagues-head">
+              <h2>Formal commendations</h2>
+              <span className="count-pill">{commendations.length} letters</span>
+            </div>
+            <ul className="commend-list">
+              {commendations.map((c) => (
+                <li className="commend" key={c.office}>
+                  <p className="commend-from">
+                    <strong>{c.from}</strong>
+                    <span>{c.office}</span>
+                  </p>
+                  <p className="commend-reason">{c.reason}</p>
+                  <p className="commend-sign">
+                    {c.signed} · <time>{c.date}</time>
+                  </p>
+                </li>
+              ))}
+            </ul>
+            <a
+              className="text-link li-link"
+              href={commendationsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read the letters <External />
+            </a>
+          </div>
 
           <div className="colleagues">
             <div className="colleagues-head">

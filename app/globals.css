@@ -1192,7 +1192,52 @@ html.has-scrolled .about-photo img {
     grid-template-columns: 1fr;
   }
 }
-
+/* About: formal commendations */
+.commendations {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding-top: clamp(3rem, 6vw, 4rem);
+  border-top: 1px solid var(--line);
+}
+.commend-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.commend {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--yellow);
+  border-radius: 12px;
+  padding: 1.3rem 1.5rem;
+}
+.commend-from strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+.commend-from span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-top: 0.2rem;
+}
+.commend-reason {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e5e5e5;
+}
+.commend-sign {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
 /* ---------- Writing ---------- */
 .writing-group + .writing-group {
   margin-top: clamp(4rem, 9vw, 6.5rem);

@@ -22,10 +22,11 @@ const featuredWork = [
     image: "/images/site-eos.jpg",
   },
   {
-    title: "INEC voter registration",
+    title: "IMAN medical outreach, Ogun State",
     summary:
-      "1,200+ voter registrations processed across three deployments with zero recorded errors.",
-    image: "/images/portfolio-inec-1.jpg",
+      "Ran registration and patient flow for 100+ health screenings per session, keeping records accurate from intake to consultation.",
+    image: "/images/portfolio-iman.jpg",
+    position: "center 30%",
   },
 ];
 
@@ -128,7 +129,10 @@ export default function Home() {
           <div className="home-work">
             {featuredWork.map((w) => (
               <Link href="/portfolio" className="home-work-card" key={w.title}>
-                <span className="home-work-img">
+                <span
+                  className="home-work-img"
+                  style={{ "--pos": w.position } as React.CSSProperties}
+                >
                   <Photo src={w.image} alt="" />
                 </span>
                 <span className="home-work-body">

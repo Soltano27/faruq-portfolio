@@ -672,6 +672,109 @@ p {
   gap: 0.35rem;
 }
 
+/* ---------- Home: windows into the other pages ---------- */
+.row-head-sm {
+  margin-bottom: 0;
+  align-items: center;
+}
+.home-work {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.home-work-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+.home-work-card:hover {
+  border-color: var(--yellow);
+}
+.home-work-img {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #1c1c1c;
+  border-bottom: 1px solid var(--line);
+}
+.home-work-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.home-work-body {
+  display: grid;
+  gap: 0.6rem;
+  padding: 1.4rem 1.5rem 1.6rem;
+}
+.home-work-body strong {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+.home-work-body span {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.home-quotes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+.home-note {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.home-cta {
+  padding: clamp(4rem, 9vw, 6.5rem) 0;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse 60% 80% at 50% 0%,
+      rgba(245, 197, 24, 0.12),
+      transparent 70%
+    ),
+    var(--bg);
+  border-top: 1px solid var(--line);
+}
+.home-cta h2 {
+  font-size: clamp(1.9rem, 4.2vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.home-cta p {
+  margin: 1rem auto 0;
+  max-width: 46ch;
+  color: var(--muted);
+}
+.home-cta .actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+@media (max-width: 900px) {
+  .home-work,
+  .home-quotes {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .row-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* ---------- Experience ---------- */
 .exp-wrap {
   max-width: 860px;
